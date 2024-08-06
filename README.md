@@ -10,6 +10,9 @@ The theme in the theme folder adds this segment to the atomic theme:
     "powerline_symbol": "",
     "foreground": "#26C6DA",
     "background": "#546E7A",
+    "background_templates": [
+        "{{if eq \"COM\" .Env.VI_MODE_SEGMENT}}#33DD2D{{end}}"
+    ],
     "template": "{{ .Env.VI_MODE_SEGMENT }}"
 },
 ```
