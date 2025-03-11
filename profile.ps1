@@ -1,4 +1,6 @@
 $Env:VI_MODE_SEGMENT = "INS"
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadLineOption -PredictionViewStyle ListView -PredictionSource HistoryAndPlugin -EditMode Vi -ViModeIndicator Script -ViModeChangeHandler {
     param($mode)
 
